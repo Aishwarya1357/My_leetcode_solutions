@@ -2,20 +2,17 @@ class Solution {
 public:
     int removeDuplicates(vector<int>& nums) {
 
-        set<int>myset;
+        int i=0;
+        for(int j=0;j<nums.size();j++){
+            if(nums[j]!=nums[i]){
+                nums[i+1]=nums[j];
+                i++;
 
-        for(int i=0;i<nums.size();i++){
-            myset.insert(nums[i]);
+            }
         }
+        return i+1;
 
-        int index=0;
 
-       for(auto it : myset){
-        nums[index]=it;
-        index++;
-       }
-
-       return index;
 
         
 
