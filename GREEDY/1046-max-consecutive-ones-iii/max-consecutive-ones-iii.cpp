@@ -9,7 +9,7 @@ public:
             if (nums[r] == 0)
                 zero_count++;
 
-            while (zero_count > k) {
+           if (zero_count > k) {
                 if (nums[l] == 0)
                     zero_count--;
                 l++;
